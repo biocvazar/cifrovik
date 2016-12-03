@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openServiceDescription xmlns="http://www.microsoft.com/schemas/openservicedescription/1.0">
+    <homepageUrl>http://127.0.0.1:8080/products</homepageUrl>
+    <display>
+        <name>Сіфровик</name>
+        <icon>http://127.0.0.1:8080/images/cfr/logo.gif</icon>
+        <description>Мій цифровик</description>
+    </display>
+    <activity category="Product">
+        <activityAction context="selection">
+           <preview action="http://127.0.0.1:8080/products?search={selection}" />
+            <execute action="http://127.0.0.1:8080/products?search={selection}" method="get">
+                <parameter name="search" value="{selection}" type="text" /> 
+            </execute>
+        </activityAction>
+    </activity>
+
+</openServiceDescription> 
